@@ -2,6 +2,8 @@
 
 Serial connection over WiFi using WebSockets
 
+![C/C++ CI](https://github.com/homebots/remote-serial/workflows/C/C++%20CI/badge.svg)
+
 ## Requirements
 
 - A relay server for a WebSocket connection (it acts as a proxy for messages)

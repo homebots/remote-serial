@@ -13,5 +13,4 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: make
-      run: mkdir build && mkdir firmware && docker run --rm -i -v$GITHUB_WORKSPACE:/home/espbuilder/project darlanalves/homebots-sdk:latest
+    - run: cd $GITHUB_WORKSPACE && ls -1 * && echo $PWD && docker run --rm -i -v$PWD:/home/espbuilder/project alpine:latest ls -a

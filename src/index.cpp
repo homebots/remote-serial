@@ -22,7 +22,7 @@ static char uartBuffer[UART_RX_BUFFER_SIZE] = {0};
 
 void onReceive(struct ws_info *socket, int length, char *message, int opCode) {
   if (opCode == WS_OPCODE_TEXT) {
-    os_printf("%s\r\n", message);
+    os_printf("%s", message);
   }
 }
 
@@ -77,6 +77,8 @@ void ICACHE_FLASH_ATTR setup() {
   webSocket.onReceive = onReceive;
   webSocket.onConnection = onConnection;
   webSocket.onFailure = onFailure;
+
+  // wifiConnection.startAccessPoint("Test");
 }
 
 #ifdef __cplusplus
